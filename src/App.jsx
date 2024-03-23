@@ -7,8 +7,8 @@ import './get-user'
 import { checkLogin } from './get-user'
 
 function App() {
-  const [userName, setUserName] = useState('')
-  const [passWord, setPassword] = useState('')
+  const [userName, setUserName] = useState('Solar331')
+  const [passWord, setPassword] = useState('M1234')
 
   return (
     <>
