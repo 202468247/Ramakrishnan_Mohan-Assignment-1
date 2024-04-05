@@ -10,7 +10,7 @@ function App() {
   const [loginMessage, setloginMessage] = useState('')
 
   useEffect(() => {
-    //setloginMessage(checkLogin('Solar331','M1234'))
+    //loginMessage === ''//setloginMessage(checkLogin('Solar331','M1234'))
   }, [])
 
   return (
