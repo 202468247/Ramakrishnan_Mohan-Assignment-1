@@ -1,5 +1,5 @@
 import {userData} from './user.jsx'
-import {emailValidation, phoneValidation, userNameValidation, passWordValidation} from './validation'
+import {emailValidation, phoneValidation, userNameValidation, passWordValidation} from './validation.jsx'
 
 let returnMessage = ''
 
@@ -7,8 +7,6 @@ export function checkLogin (userName, passWord) {
 
     //Check for login 
     const newArray = userData.filter(element => element.userName == userName)
-
-    console.log(newArray.length)
 
     if ((newArray.length)) {
         if (newArray[0].passWord==passWord) {
