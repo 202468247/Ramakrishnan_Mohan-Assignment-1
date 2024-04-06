@@ -1,8 +1,40 @@
-# React + Vite
+Structure of components organized:
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Features:
 
-Currently, two official plugins are available:
+    -	Users Login
+    
+    -	list of Users
+            - name
+            - password
+            - email address
+            - Phone number
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+    -	menu showing links to the following:
+            - Service & Deals
+            - About
+            - Contact
+            - Social Media Links: FB, Insta, Twitter
+    
+    -	User Login
+    
+            - Props:
+               - Username
+               - Password
+            - State
+              - Login message
+            
+     -  Children components
+     
+         - Users (contains all the users)
+             - Props:
+                  - Array of names of users contains Name, User type, Username, Password, Email, Phone
+             - State:
+                  - None
+             - Children
+                  - Validation
+                        - props:
+                            - Email
+                            - Password
+                        - State:
+                            - None
