@@ -1,0 +1,60 @@
+.checkout-grid {
+    width: 95%;
+    border-collapse: collapse;
+    padding: 50px;
+  }
+  
+  .grid-header, .grid-row {
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr 1fr;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+  }
+  
+  .grid-header div, .grid-row div {
+    text-align: left;
+    padding: 5px;
+  }
+  
+  .grid-header {
+    font-weight: bold;
+  }
+  
+  .grid-row:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+
+  .square-block {
+    width: 100%; /* Adjust width and height as needed */
+    height: 100px;
+    border: 2px solid red; /* Red border */
+    background-color: lightgrey; /* Light grey background */
+    color: black; /* Black text color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .square-button-container {
+    width: 100%; /* Adjust width as needed */
+    height: 50px; /* Adjust height as needed */
+    border: 2px solid black; /* Grey border */
+    background-color: lightgrey; /* Black background */
+    position: relative;
+  }
+
+  .button-container {
+    position: absolute;
+    top: 50%; /* Align vertically in the middle */
+    right: 100px; /* Adjust horizontal position as needed */
+    transform: translateY(-50%); /* Adjust vertical position to center */
+  }
+  
+  .button-container button {
+    width:100%; /* Button width */
+    height: 50px; /* Button height */
+    background-color: red ;
+    color: white;
+    font-size: 25px;
+  }
+  

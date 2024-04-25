@@ -1,29 +1,34 @@
-import { useState } from 'react'
-import ReactDOM from "react-dom"
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './index.css'
-import './get-user'
-import { checkLogin } from './get-user'
+import React, { useState } from 'react';
+import Footer from './Components/Footer.jsx'
+import Header from './Components/header.jsx'
+import Mainsection from './Components/Mainsection.jsx'
+import ClientHeader from './Components/ClientHeader.jsx'
 
-function App() {
-  const [userName, setUserName] = useState('Solar331')
-  const [passWord, setPassword] = useState('M1234')
+import About from './Pages/About.jsx'
+import Services from './Pages/Services.jsx'
+import Contact from './Pages/Contact.jsx'
+import SelectItems from './Pages/SelectItems.jsx'
+import Login from './Pages/Login.jsx'
 
-  return (
-    <>
-     
-      <div className="card">
-        <label size="10">User Name: </label>
-        <input type="text" name="userName" size="10"></input>
-        <label size="10">  Password:   </label>
-        <input type="text" name="passWord" size="10"></input>
-        <button onClick={(checkLogin('Solar331','M1234'))} size="100px">Login</button>
-        <label id="LoginErrMsg">{(checkLogin('Solar331','M1234'))}</label>
-      </div>
-     
-    </>
-  )
+export default App => {
+    const [currentPage, setCurrentPage] = useState('Home')
+
+    function handlePageChange(page) {
+        setCurrentPage(page);
+      }
+
+    return (
+        <>            
+            <Header onPageChange={handlePageChange} />
+            {currentPage === "Home" && <Mainsection />}
+            {currentPage === "About" && <About />}
+            {currentPage === "Services" && <Services />}
+            {currentPage === "Contact" && <Contact />}
+            {currentPage === "SelectItems" && <SelectItems />}
+            {currentPage === "Login" && <Login onPageChange={handlePageChange} />}
+            <Footer />
+        </>
+    )
+
 }
 
-export default App
