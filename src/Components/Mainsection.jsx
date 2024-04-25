@@ -1,11 +1,12 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-//import './index.css'
+import '../Styles/index.css'
+
 
 function Mainsection () {
-    return (
-                            
-        <main class="mainsection">
+
+    return (                            
+        <main className="mainsection">
             <main1>
                 <h2>Welcome to our discounted Service Referral program</h2>
                 <h4>We work with top quality brands and bring you the best possible deals</h4>
@@ -14,7 +15,7 @@ function Mainsection () {
             <main2>
                 <img id="mainimage" src="/Images/convert_percentage.png" alt="Image of Percentage conversion of service referrals" height="400px"/>
             </main2>
-        </main>      
+        </main>  
 
     )
 }
