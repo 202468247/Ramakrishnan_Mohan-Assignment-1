@@ -1,13 +1,12 @@
 import React, { useState } from 'react';
 import {userData} from '../Data/user.jsx'
 
-const Login = () => {
+const Login = (props) => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [loggedIn, setLoggedIn] = useState(false);
   const [name, setName] = useState('');
-  //const navigate = useNavigate();
-  
+ 
   const handleLogin = () => {
     
     const newArray = userData.filter(element => element.userName == username)
@@ -15,9 +14,11 @@ const Login = () => {
     if (newArray.length) {
       if (username === newArray[0].userName && password === newArray[0].passWord) {
         setLoggedIn(true);
+        setUsername(newArray[0].userName)
         setName(newArray[0].firstName)
-        localStorage.setItem('MY-loggedIn', loggedIn);
-        localStorage.setItem('MY-name', name)
+        localStorage.setItem('MY-loggedIn', true);
+        localStorage.setItem('MY-userName', JSON.stringify(username))
+        localStorage.setItem('MY-name', JSON.stringify(name))
       } else {
         alert('Invalid password');
       }    
@@ -32,18 +33,8 @@ const Login = () => {
     setUsername('');
     setPassword('');
     localStorage.removeItem('MY-loggedIn')
+    localStorage.removeItem('MY-userName')
     localStorage.removeItem('MY-name')
-  };
-
-  const goSelecteItems = () => {    
-    console.log('test3')
-    return (
-      <main className="mainsection">
-        <main1>
-          <h2>Welcome to Select Items{name}!</h2>
-        </main1>
-      </main>      
-    );
   };
 
   if (loggedIn) {
@@ -54,15 +45,14 @@ const Login = () => {
             </main2>
         <main1>
           <h2>Welcome, {name}!</h2>
-          <button onClick={goSelecteItems}>
+          <button onClick={() => props.onPageChange('SelectItems')}>
             <img src="/images/Continue3.png" width="100px" height="100px"></img>
           </button>
           <br></br>
-          <button onClick={handleLogout}>Logout</button>
-          
+          <button onClick={handleLogout}>Logout</button>        
         </main1>
         <main2>
-                <img id="Login1" src="/Images/Login1.jpg" alt="Image of Percentage conversion of service referrals" height="400px"/>
+                <img id="Login2" src="/Images/Login1.jpg" alt="Image of Percentage conversion of service referrals" height="400px"/>
             </main2>
       </main>
     );

@@ -14,28 +14,28 @@ const Contact = () => {
         suggestions, or inquiries, please feel free to reach out to us. Our dedicated team is here to assist you.</p>
         
         <h3>Contact Details:</h3>
-        <ul>
-          <li><strong>Email:</strong> <a href="mailto:contact@example.com">contact@example.com</a></li>
-          <li><strong>Phone:</strong> +1 (123) 456-7890</li>
-          <li><strong>Address:</strong> Company Address, City, State, Zip Code</li>
+        <ul style={paragraphStyle}>
+          <li style={paragraphStyle}>Email: <a href="mailto:contact@cvksolutions.com">contact@cvksolutions.com</a></li>
+          <li>Phone: +1 (647) 456-7890</li>
+          <li>Address: 8 Milner Ave, Toronto, ON, L6P 1Z9</li>
         </ul>
 
         <h3>Social Media:</h3>
 
         <p style={paragraphStyle}>Stay connected with us on social media for updates, promotions, and more:</p>
 
-        <ul>
-          <li ><strong>Facebook:</strong> <a href="https://facebook.com/SR">https://facebook.com/SR</a></li>
-          <li><strong>Twitter:</strong> <a href="https://twitter.com/sR">https://twitter.com/sR</a></li>
-          <li><strong>Instagram:</strong> <a href="https://instagram.com/SR">https://instagram.com/SR</a></li>
-          <li><strong>LinkedIn:</strong> <a href="https://linkedin.com/SR">https://linkedin.com/SR</a></li>
+        <ul style={paragraphStyle}>
+          <li >Facebook: <a href="https://facebook.com/solar331">https://facebook.com/solar331</a></li>
+          <li>Twitter: <a href="https://twitter.com/solar331">https://twitter.com/solar331</a></li>
+          <li>Instagram: <a href="https://instagram.com/solar331">https://instagram.com/solar331</a></li>
+          <li>LinkedIn: <a href="https://linkedin.com/solar331">https://linkedin.com/solar331</a></li>
         </ul>
 
         <h3>Business Hours:</h3>
 
         <p style={paragraphStyle}>Our team is available to assist you during the following hours:</p>
 
-        <ul>
+        <ul style={paragraphStyle}>
           <li>Monday to Friday: 9:00 AM - 5:00 PM (local time)</li>
           <li>Saturday and Sunday: Closed</li>
         </ul>
